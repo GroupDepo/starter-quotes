@@ -4,6 +4,11 @@ First check in by LZ
 Owner - LZ
 member - TT
 
+Commenting format:
+comment to each line implemented on the purpose and functionality
+eg.
+$this-> $aa //comment
+
 #######################
 Starter Webapp - Quotes
 #######################
