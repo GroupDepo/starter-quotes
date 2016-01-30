@@ -33,6 +33,15 @@ class Welcome extends Application {
 
 		$this->render();
 	}
+        function shucks()
+	{
+		$this->data['pagebody'] = 'justone';	// this is the view we want shown
+                $record = $this->quotes-> get("2");      // fetch the second person's quote function
+                
+                $this->data = array_merge($this->data,$record);     //convert and output
+                
+		$this->render();
+	}
         
 }
 
