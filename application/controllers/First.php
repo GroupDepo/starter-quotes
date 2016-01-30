@@ -34,7 +34,17 @@ class First extends Application {
             $this->data['pagebody'] = 'justone';	// this is the view we want shown
                 $record = $this->quotes-> first();      // set to first person in the list using first function
                 
-                $this->data = array_merge($this->data,$record);
+                $this->data = array_merge($this->data,$record); //convert and output
+                
+		$this->render();
+        }
+        
+        function gimme($id)
+        {
+            $this->data['pagebody'] = 'justone';	// this is the view we want shown
+                $record = $this->quotes-> get($id);     //call the get() function and allows for retrieve of id value from site
+                
+                $this->data = array_merge($this->data,$record);     //convert and output
                 
 		$this->render();
         }
