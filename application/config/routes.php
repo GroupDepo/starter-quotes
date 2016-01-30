@@ -51,6 +51,7 @@ $route['dunno'] = function() {
     readfile($source); // dish it
     die(); // and we don't have to go any further
 };
+$route['\b\w[a-z]{3}\b/bingo'] = "bingo";       //route regexp to bingo for any 4 character length word
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
