@@ -22,12 +22,22 @@ class First extends Application {
 	function index()
 	{
 		$this->data['pagebody'] = 'justone';	// this is the view we want shown
-                $record = $this->quotes-> first();
+                $record = $this->quotes-> first();      // fetch the first person's quote function
+                
+                $this->data = array_merge($this->data,$record);     //convert and output
+                
+		$this->render();
+	}
+        
+        function zzz()      //create the new zzz function for sleep page
+        {
+            $this->data['pagebody'] = 'justone';	// this is the view we want shown
+                $record = $this->quotes-> first();      // set to first person in the list using first function
                 
                 $this->data = array_merge($this->data,$record);
                 
 		$this->render();
-	}
+        }
 
 }
 

@@ -33,7 +33,7 @@ class Welcome extends Application {
 
 		$this->render();
 	}
-
+        
 }
 
 /* End of file Welcome.php */
