@@ -43,6 +43,14 @@ $route['404_override'] = '';
 $route['sleep'] = "first/zzz";      //adding route sleep to first/zzz function
 $route['lock/(:any)/(:any)'] = "Welcome/shucks";    // adding route lock/em/up to Welcome/shucks function
 $route['show/(:num)'] = "first/gimme/$1";       //implement route for wildcard to get gimme function
+$route['dunno'] = function() {
+    $source = './data/surprise.jpg'; // an image you provide
+    // set the mime type for that image
+    header("Content-type: image/jpeg"); 
+    header('Content-Disposition: inline');
+    readfile($source); // dish it
+    die(); // and we don't have to go any further
+};
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
